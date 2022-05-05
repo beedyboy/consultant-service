@@ -1,0 +1,16 @@
+import express from "express"; 
+import { multerUploads } from '../config/multer';
+import { auth } from '../Middleware/authorization';
+import ConsultantController from '../controllers/consultant';
+const router = express.Router();
+const Consultant = new ConsultantController();
+var upload = multerUploads.single("image");
+router.get("/", Consultant.getAll);
+router.get("/:id", Consultant.getById);
+router.get("/", Consultant.getAll);
+router.post("/", Consultant.create); 
+router.put("/", Consultant.update); 
+router.put("/pp", upload,  Consultant.setUpload);
+// router.put("/pp", [upload, auth.hasAuthorization],  Consultant.setUpload);
+router.delete("/:id", Consultant.remove);
+export default router;
