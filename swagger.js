@@ -4,10 +4,10 @@ const outputFile = "./swagger.json";
 const doc = {
   info: {
     version: "1.0.0",
-    title: "SportGo API",
+    title: "CONSULTATION SERVICE API",
     description: "API documentation for end users",
   },
-  host: "sportgo-backend.herokuapp.com",
+  host: "https://paymax-consultant-service.herokuapp.com",
   basePath: "/",
   schemes: ["http", "https"],
   consumes: ["application/json"],

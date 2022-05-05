@@ -7,8 +7,8 @@ const swaggerUi = require("swagger-ui-express");
 const swaggerDocument = require("./swagger.json");
 const customCss = fs.readFileSync((process.cwd()+"/swagger.css"), 'utf8');
 const app = express();
-const { PORT, DB_URL } = process.env;
-dbConnect(DB_URL);
+const { PORT, MONGO_URL } = process.env;
+dbConnect(MONGO_URL);
 
 app.use(
   "/api-docs",
