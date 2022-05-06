@@ -8,8 +8,8 @@
     "swagger-autogen": "node ./app/swagger.js",
     "dev": "nodemon  --exec babel-node app/server.js",
     "devs": "nodemon  server.js --exec babel-node -e",
-    "build": "babel app -d dist && cp -R app/swagger.css dist/",
-    "start": "npm run build && yarn run swagger && node ./dist/server.js"
+    "build": "babel app -d dist && cp -R app/swagger.json dist/",
+    "start": "npm run build  && node ./dist/server.js"
   },
   "keywords": [],
   "author": "",
