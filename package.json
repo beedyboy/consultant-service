@@ -7,7 +7,7 @@
     "swagger-autogen": "node ./swagger.js",
     "dev": "nodemon  --exec babel-node server.js",
     "devs": "nodemon  server.js --exec babel-node -e",
-    "build": "babel server.js -d dist",
+    "build": "npm run server.js -d dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run build && node ./dist/server.js"
   },
