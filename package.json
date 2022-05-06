@@ -7,7 +7,7 @@
     "swagger-autogen": "node ./swagger.js",
     "dev": "nodemon  --exec babel-node server.js",
     "devs": "nodemon  server.js --exec babel-node -e",
-    "build": "npm run server.js -d dist",
+    "build": "yarn server.js -d dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run build && node ./dist/server.js"
   },
@@ -16,6 +16,12 @@
   "license": "ISC",
   "dependencies": {
     "amqplib": "^0.8.0",
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.8",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-stage-0": "^6.24.1",
     "cloudinary": "^1.29.0",
     "cors": "^2.8.5",
     "datauri": "^4.1.0",
@@ -29,12 +35,6 @@
     "swagger-ui-express": "^4.3.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.17.6",
-    "@babel/core": "^7.17.8",
-    "@babel/node": "^7.16.8",
-    "@babel/preset-env": "^7.16.11",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-stage-0": "^6.24.1",
     "swagger-autogen": "^2.21.1"
   }
 }
