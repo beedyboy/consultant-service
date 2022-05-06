@@ -1,0 +1,150 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "CONSULTATION SERVICE API",
+    "description": "API documentation for end users"
+  },
+  "host": "https://paymax-consultant-service.herokuapp.com",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Division",
+      "description": "Division"
+    },
+    {
+      "name": "Category",
+      "description": "Category Model"
+    },
+    {
+      "name": "Consultant",
+      "description": "Consultant Model"
+    }
+  ],
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "securityDefinitions": {
+    "bearerAuth": {
+      "type": "http",
+      "scheme": "bearer",
+      "in": "header",
+      "name": "Authorization",
+      "bearerFormat": "JWT"
+    }
+  },
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {},
+  "definitions": {
+    "Division": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "example": "624b591c970f62326dccf85e"
+        },
+        "division": {
+          "type": "string",
+          "example": "Reporting"
+        }
+      },
+      "required": [
+        "category",
+        "division"
+      ]
+    },
+    "Category": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "Financial"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "Consultant": {
+      "type": "object",
+      "properties": {
+        "user": {
+          "type": "string",
+          "example": "624c77a466cc249958c7f0b5"
+        },
+        "officeName": {
+          "type": "string",
+          "example": "Test Hospital"
+        },
+        "address": {
+          "type": "string",
+          "example": "online local government area"
+        },
+        "country": {
+          "type": "string",
+          "example": "Nigeria"
+        },
+        "state": {
+          "type": "string",
+          "example": "Lagos"
+        },
+        "region": {
+          "type": "string",
+          "example": "Ikeja"
+        },
+        "landmark": {
+          "type": "string",
+          "example": "Etiebet place"
+        },
+        "phone": {
+          "type": "string",
+          "example": ""
+        },
+        "specialization": {
+          "type": "array",
+          "example": [
+            "Dental Care",
+            "ENT"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "gender": {
+          "type": "string",
+          "example": "Male"
+        },
+        "language": {
+          "type": "string",
+          "example": "English"
+        },
+        "regNumber": {
+          "type": "string",
+          "example": ""
+        },
+        "officePic": {
+          "type": "string",
+          "example": ""
+        },
+        "skills": {
+          "type": "array",
+          "example": [],
+          "items": {}
+        },
+        "statement": {
+          "type": "string",
+          "example": ""
+        }
+      },
+      "required": [
+        "user"
+      ]
+    }
+  }
+}
