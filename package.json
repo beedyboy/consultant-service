@@ -7,9 +7,9 @@
     "swagger-autogen": "node ./swagger.js",
     "dev": "nodemon  --exec babel-node server.js",
     "devs": "nodemon  server.js --exec babel-node -e",
-    "build": "babel index.js -d dist",
+    "build": "babel server.js -d dist",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run build && node ./dist/index.js"
+    "start": "npm run build && node ./dist/server.js"
   },
   "keywords": [],
   "author": "",
