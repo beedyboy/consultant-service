@@ -341,50 +341,6 @@
       "required": [
         "user"
       ]
-    },
-    "Experiences": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "contractType": {
-            "type": "string",
-            "example": "JOINED"
-          },
-          "_id": {
-            "type": "string",
-            "example": "620d05118fbe68386241d11c"
-          },
-          "team": {
-            "type": "string",
-            "example": "6209a7f47509493c57375331"
-          },
-          "startDate": {
-            "type": "string",
-            "example": "31-08-2017"
-          },
-          "endDate": {
-            "type": "string",
-            "example": "31-08-2011"
-          },
-          "present": {
-            "type": "boolean",
-            "example": false
-          },
-          "position": {
-            "type": "string",
-            "example": "MidFielder"
-          },
-          "description": {
-            "type": "string",
-            "example": "I am a big boy"
-          },
-          "user": {
-            "type": "string",
-            "example": "61f86b7f4718c9c78726ae0d"
-          }
-        }
-      }
     }
   }
 }

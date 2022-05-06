@@ -1,6 +1,6 @@
 const swaggerAutogen = require("swagger-autogen")();
-const outputFile = "./swagger.json";
-
+const outputFile = `${__dirname}/swagger.json`;
+console.log({__dirname});
 const doc = {
   info: {
     version: "1.0.0",
@@ -59,23 +59,10 @@ const doc = {
     officePic: "",
     skills: [],
     statement: ""
-    },
-    Experiences: [
-      {
-        contractType: "JOINED",
-        _id: "620d05118fbe68386241d11c",
-        team: "6209a7f47509493c57375331",
-        startDate: "31-08-2017",
-        endDate: "31-08-2011",
-        present: false,
-        position: "MidFielder",
-        description: "I am a big boy",
-        user: "61f86b7f4718c9c78726ae0d",
-      },
-    ],
+    }, 
   },
 };
-const endpointsFiles = ["./app/routes/index.js"];
+const endpointsFiles = [__dirname+"/routes/index.js"];
 
 /* NOTE: if you use the express Router, you must pass in the 
    'endpointsFiles' only the root file where the route starts,

@@ -7,7 +7,7 @@
 /coverage
 
 # production
-/build
+/dist
 #/config/config.json 
 .env
 .DS_Store

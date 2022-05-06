@@ -1,11 +1,12 @@
 import express from "express";
-import dbConnect from "./app/config/db";
-import routes from "./app/routes";
+import dbConnect from "./config/db";
+import fs from "fs";
+import routes from "./routes";
 const cors = require("cors");
-require("dotenv").config();
-const swaggerUi = require("swagger-ui-express");
-const swaggerDocument = require("./swagger.json");
-const customCss = fs.readFileSync(process.cwd() + "/swagger.css", "utf8");
+require("dotenv").config(); 
+import  swaggerUi from "swagger-ui-express";
+import swaggerDocument from "./swagger.json"; 
+// const customCss = fs.readFileSync(process.cwd() + "./swagger.css", "utf8");
 const app = express();
 const { PORT, MONGO_URL } = process.env;
 dbConnect(MONGO_URL);
@@ -13,7 +14,7 @@ dbConnect(MONGO_URL);
 app.use(
   "/api-docs",
   swaggerUi.serve,
-  swaggerUi.setup(swaggerDocument, { explorer: true, customCss })
+  swaggerUi.setup(swaggerDocument, { explorer: true })
 );
 const origin = "*";
 app.use(
