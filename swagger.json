@@ -1,0 +1,390 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "CONSULTATION SERVICE API",
+    "description": "API documentation for end users"
+  },
+  "host": "https://paymax-consultant-service.herokuapp.com",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Division",
+      "description": "Division"
+    },
+    {
+      "name": "Category",
+      "description": "Category Model"
+    },
+    {
+      "name": "Consultant",
+      "description": "Consultant Model"
+    }
+  ],
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "securityDefinitions": {
+    "bearerAuth": {
+      "type": "http",
+      "scheme": "bearer",
+      "in": "header",
+      "name": "Authorization",
+      "bearerFormat": "JWT"
+    }
+  },
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/category/": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "id": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/category/{id}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/division/": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "example": "any"
+                },
+                "division": {
+                  "example": "any"
+                },
+                "category": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/division/{id}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/consultation/": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      },
+      "put": {
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/consultation/{id}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/consultation/pp": {
+      "put": {
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    }
+  },
+  "definitions": {
+    "Division": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "example": "624b591c970f62326dccf85e"
+        },
+        "division": {
+          "type": "string",
+          "example": "Reporting"
+        }
+      },
+      "required": [
+        "category",
+        "division"
+      ]
+    },
+    "Category": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "Financial"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "Consultant": {
+      "type": "object",
+      "properties": {
+        "user": {
+          "type": "string",
+          "example": "624c77a466cc249958c7f0b5"
+        },
+        "officeName": {
+          "type": "string",
+          "example": "Test Hospital"
+        },
+        "address": {
+          "type": "string",
+          "example": "online local government area"
+        },
+        "country": {
+          "type": "string",
+          "example": "Nigeria"
+        },
+        "state": {
+          "type": "string",
+          "example": "Lagos"
+        },
+        "region": {
+          "type": "string",
+          "example": "Ikeja"
+        },
+        "landmark": {
+          "type": "string",
+          "example": "Etiebet place"
+        },
+        "phone": {
+          "type": "string",
+          "example": ""
+        },
+        "specialization": {
+          "type": "array",
+          "example": [
+            "Dental Care",
+            "ENT"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "gender": {
+          "type": "string",
+          "example": "Male"
+        },
+        "language": {
+          "type": "string",
+          "example": "English"
+        },
+        "regNumber": {
+          "type": "string",
+          "example": ""
+        },
+        "officePic": {
+          "type": "string",
+          "example": ""
+        },
+        "skills": {
+          "type": "array",
+          "example": [],
+          "items": {}
+        },
+        "statement": {
+          "type": "string",
+          "example": ""
+        }
+      },
+      "required": [
+        "user"
+      ]
+    },
+    "Experiences": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "contractType": {
+            "type": "string",
+            "example": "JOINED"
+          },
+          "_id": {
+            "type": "string",
+            "example": "620d05118fbe68386241d11c"
+          },
+          "team": {
+            "type": "string",
+            "example": "6209a7f47509493c57375331"
+          },
+          "startDate": {
+            "type": "string",
+            "example": "31-08-2017"
+          },
+          "endDate": {
+            "type": "string",
+            "example": "31-08-2011"
+          },
+          "present": {
+            "type": "boolean",
+            "example": false
+          },
+          "position": {
+            "type": "string",
+            "example": "MidFielder"
+          },
+          "description": {
+            "type": "string",
+            "example": "I am a big boy"
+          },
+          "user": {
+            "type": "string",
+            "example": "61f86b7f4718c9c78726ae0d"
+          }
+        }
+      }
+    }
+  }
+}

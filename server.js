@@ -5,7 +5,7 @@ const cors = require("cors");
 require("dotenv").config();
 const swaggerUi = require("swagger-ui-express");
 const swaggerDocument = require("./swagger.json");
-const customCss = fs.readFileSync((process.cwd()+"/swagger.css"), 'utf8');
+const customCss = fs.readFileSync(process.cwd() + "/swagger.css", "utf8");
 const app = express();
 const { PORT, MONGO_URL } = process.env;
 dbConnect(MONGO_URL);
@@ -13,7 +13,7 @@ dbConnect(MONGO_URL);
 app.use(
   "/api-docs",
   swaggerUi.serve,
-  swaggerUi.setup(swaggerDocument, { explorer: true, customCss})
+  swaggerUi.setup(swaggerDocument, { explorer: true, customCss })
 );
 const origin = "*";
 app.use(
@@ -41,7 +41,7 @@ app.get("/", (req, res) => {
 });
 (async () => {
   try {
-    app.listen(process.env.PORT, (err) => {
+    await app.listen(process.env.PORT, (err) => {
       if (err) {
         console.log("Server Connection Failed");
         throw err;
