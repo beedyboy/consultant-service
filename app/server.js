@@ -36,7 +36,7 @@ app.use(
 );
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use('https://consultantation-service.herokuapp.com/consultantationmgt',routes);
+app.use('/consultantationmgt',routes);
 app.get("/", (req, res) => {
   res.send("<h2>Hi there!</h2>");
 });
